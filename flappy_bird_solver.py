@@ -1,3 +1,5 @@
+# AI solver that teaches itself how to perfectly play the popular game Flappy Bird.
+# Using the NEAT and pygame python modules for the AI solver and game creation respectively.
 import pygame
 import neat
 import time
