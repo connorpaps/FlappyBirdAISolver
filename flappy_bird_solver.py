@@ -22,6 +22,8 @@ BG_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join("images", "bg
 # pygame font
 STAT_FONT = pygame.font.SysFont("Calibri", 40, True)
 
+pygame.display.set_caption("Flappy Bird AI Solver")
+
 # Bird object to control the velocity and rotation of the birds
 class Bird:
     IMAGES = BIRD_IMAGES
@@ -31,7 +33,6 @@ class Bird:
     ANIMATION_TIME = 5
 
     def __init__(self, x, y):
-        # bird variables
         self.x = x
         self.y = y
         self.tilt = 0
@@ -67,10 +68,10 @@ class Bird:
             if self.tilt > -90:
                 self.tilt -= self.ROT_VEL
       
+    # checking what image to show for bird animation based on count
+    # goes through all three flapping images then reverses
     def draw(self, win):
         self.image_count += 1
-        # checking what image to show for bird animation based on count
-        # goes through all three flapping images then reverses
         if self.image_count < self.ANIMATION_TIME:
             self.image = self.IMAGES[0]
         elif self.image_count < self.ANIMATION_TIME*2:
@@ -210,6 +211,7 @@ def main(genomes, config):
     score = 0
 
     run = True
+    # while the game is running, monitor birds and increase fitness as needed remove birds that get hit and spawn generations of birds with the neural network until the perfect bird is found
     while run:
         clock.tick(30)
         for event in pygame.event.get():
@@ -279,7 +281,7 @@ def main(genomes, config):
         # drawing the objects on the screen
         draw_window(win, birds, pipes, base, score, GEN)
 
-# neat setup configuration
+# neat AI setup configuration
 def run(config_path):
     # load all neat config file settings
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
