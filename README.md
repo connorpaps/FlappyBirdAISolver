@@ -9,7 +9,7 @@ Run *flappy_bird_solver.py* and watch the AI train itself over multiple generati
 
 # Run Program through GitPod
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-repository-url>)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/connorpaps/FlappyBirdAISolver)
 
 
 # Video Demo
