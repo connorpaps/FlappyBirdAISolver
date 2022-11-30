@@ -7,7 +7,10 @@ An AI that uses the NEAT python module to solve a game of Flappy Bird created us
 # Instructions
 Run *flappy_bird_solver.py* and watch the AI train itself over multiple generations until it can run it endlessly.
 
-# Run Program through Git
+# Run Program through GitPod
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-repository-url>)
+
 
 # Video Demo
 
